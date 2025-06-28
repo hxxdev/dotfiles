@@ -1,5 +1,7 @@
-source ~/dev/tools/vim/nvim/plugins.vim
-source ~/dev/tools/vim/nvim/env.vim
-source ~/dev/tools/vim/nvim/map.vim
-source ~/dev/tools/vim/nvim/lua/init.lua
-source ~/dev/tools/vim/nvim/themes.vim
+let s:config = stdpath('config')
+
+execute 'source ' . s:config . '/plugins.vim'
+execute 'source ' . s:config . '/env.vim'
+execute 'source ' . s:config . '/map.vim'
+execute 'source ' . s:config . '/lua/init.lua'
+execute 'source ' . s:config . '/themes.vim'
