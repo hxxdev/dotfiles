@@ -1,5 +1,4 @@
 hyfetch
-export STARSHIP_CONFIG=~/dev/tools/starship/starship.toml
 eval "$(starship init bash)"
 eval "$(thefuck --alias)"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
