@@ -1,10 +1,12 @@
-function cd() {
-    new_directory="$*";
-    if [ $# -eq 0 ]; then 
-        new_directory=${HOME};
-    fi;
-    builtin cd "${new_directory}" && ls
+cd() {
+    if [ $# -eq 0 ]; then
+        builtin cd ~
+    else
+        builtin cd "$@" || return
+    fi
+    ls --color=auto
 }
+
 
 unzip ()
 {
@@ -39,7 +41,6 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 
-alias cd='cd'
 alias ..='builtin cd ..;ls'
 alias ...='builtin cd ..; builtin cd ..;ls'
 alias ....='builtin cd ..; builtin cd ..; builtin cd..;ls'
@@ -61,6 +62,7 @@ alias goasm='cd ~/dev/assembly_playground;source env.sh'
 alias goverilog='cd ~/dev/verilog_playground;source env.sh'
 alias gotools='cd ~/dev/tools'
 alias gonvim='cd ~/dev/tools/vim/nvim'
+alias godot='cd ~/dotfiles'
 alias testcolor="awk 'BEGIN{
     s=\"/\\\\/\\\\/\\\\/\\\\/\"; s=s s s s s s s s;
     for (colnum = 0; colnum<77; colnum++) {
