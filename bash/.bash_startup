@@ -12,3 +12,4 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 #     ssh-add
 # fi
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+ssh-add
