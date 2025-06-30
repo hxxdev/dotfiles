@@ -3,13 +3,12 @@ eval "$(starship init bash)"
 eval "$(thefuck --alias)"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-# Start ssh-agent if not running, and save env vars to ~/.ssh-agent-env
-# Do not use this code. Instead run this:
-# systemctl --user start ssh-agent.service
-# systemctl --user enable ssh-agent.service
-# if ! pgrep -u "$USER" ssh-agent > /dev/null; then
-#     ssh-agent -s > ~/.ssh-agent-env
-#     ssh-add
-# fi
+# ssh
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 ssh-add
+
+# tmux
+if [ -z "$TMUX" ]; then
+#    export BASH_STARTED_WITHOUT_TMUX=1
+    tmux attach || tmux new
+fi

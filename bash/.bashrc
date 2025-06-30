@@ -85,7 +85,3 @@ if ! shopt -oq posix; then
   fi
 fi
 
-if command -v tmux >/dev/null && [ -z "$TMUX" ] && [ -z "$BASH_STARTED_WITHOUT_TMUX" ]; then
-    export BASH_STARTED_WITHOUT_TMUX=1
-    tmux attach || tmux new
-fi
