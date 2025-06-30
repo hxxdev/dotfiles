@@ -1003,6 +1003,24 @@ require('lazy').setup({
       vim.cmd.colorscheme 'catppuccin'
     end,
   },
+  {
+    'christoomey/vim-tmux-navigator',
+    cmd = {
+      'TmuxNavigateLeft',
+      'TmuxNavigateDown',
+      'TmuxNavigateUp',
+      'TmuxNavigateRight',
+      'TmuxNavigatePrevious',
+      'TmuxNavigatorProcessList',
+    },
+    keys = {
+      { '<M-h>', '<cmd><M-U>TmuxNavigateLeft<cr>' },
+      { '<M-j>', '<cmd><M-U>TmuxNavigateDown<cr>' },
+      { '<M-k>', '<cmd><M-U>TmuxNavigateUp<cr>' },
+      { '<M-l>', '<cmd><M-U>TmuxNavigateRight<cr>' },
+      { '<M-\\>', '<cmd><M-U>TmuxNavigatePrevious<cr>' },
+    },
+  },
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',

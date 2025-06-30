@@ -17,6 +17,7 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/mason.nvim'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'hxxdev/LazyVerilog', { 'as': 'lazy_verilog' }
 
 call plug#end()
