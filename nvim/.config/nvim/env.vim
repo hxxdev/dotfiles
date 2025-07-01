@@ -16,4 +16,4 @@ set listchars=tab:>·,trail:␣,extends:>,precedes:<
 set list
 set nowrap
 set signcolumn=yes
-set clipboard=unnamed
+set clipboard=unnamedplus
