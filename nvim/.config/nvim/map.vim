@@ -16,7 +16,6 @@ cnoreabbrev open NvimTreeOpen
 " nnoremap C "+C
 
 " Use system clipboard for copy/pasting.
-set clipboard=unnamed,unnamedplus
 " vnoremap y "+y
 " vnoremap d "+d
 " vnoremap c "+c
