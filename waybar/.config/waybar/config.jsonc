@@ -1,4 +1,7 @@
 {
+  "hyprland/workspaces": {
+      "all-outputs": true
+  },
   "position": "top",
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["hyprland/window"],
