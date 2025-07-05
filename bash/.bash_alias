@@ -86,4 +86,6 @@ alias testcolor="awk 'BEGIN{
 alias gitui='gitui -t ~/dev/tools/git/git-ui/catppuccin/themes/catppuccin-mocha.ron'
 alias chatgpt-gui='chatgqt > /dev/null 2>&1 &'
 alias chrome='google-chrome-stable > /dev/null 2>&1 &'
+
+alias obsidian='obsidian --no-sandbox --ozone-platform=wayland --ozone-platform-hint=auto --enable-features=UseOzonePlatform,WaylandWindowDecorations %U'
 alias update='sudo pacman -Syu && sudo mkinitcpio -P'
