@@ -4,10 +4,10 @@ if vim.g.neovide then
 end
 
 require 'config.config_vim-gutentags'
-require 'config.config_notify'
+-- require 'config.config_notify'
 require 'config.config_noice'
 require 'config.config_treesitter'
-require 'config.config_nvim-tree'
+-- require 'config.config_nvim-tree'
 require 'config.config_lualine'
 require 'config.config_lspconfig'
 require 'config.config_mason'
