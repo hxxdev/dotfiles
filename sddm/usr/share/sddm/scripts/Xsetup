@@ -1,0 +1,18 @@
+#!/bin/sh
+# Xsetup - run as root before the login dialog appears
+
+{
+  echo "---- SDDM Xsetup starting ----"
+  date
+  xrandr --query
+
+  echo "Setting DP-3 as primary..."
+  xrandr --output DP-3 --auto --primary
+
+  echo "Disabling HDMI-1..."
+  xrandr --output HDMI-1 --off
+
+  echo "Final xrandr state:"
+  xrandr --query
+} >> /var/log/sddm_xsetup.log 2>&1
+
