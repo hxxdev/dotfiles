@@ -1,21 +1,29 @@
 # dotfiles
 
-Install stow.  
+### Install stow
+
 In Arch Linux,
 
 ```bash
 sudo pacman -S stow
 ```
 
-Then, run `stow` to create symlink to this repository,  
+---
+
+### Usage
+
+run `stow` to create symlink to this repository,  
 
 ```bash
 stow <package_name>
 ```
 
+---
+
+### Dependencies
+
 For **bash scripts**, `exa` is required.  
 `exa` is a modern replacement for `ls`, written in Rust. It's designed to be a more feature-rich, user-friendly, and visually appealing way to list files and directories.  
-
 
 Install `exa` in Arch Linux:  
 
@@ -23,8 +31,18 @@ Install `exa` in Arch Linux:
 sudo pacman -S exa
 ```
 
+---
+
+### Target directory
+
 For **grub**:  
 
 ```bash
-stow -t /etc/default grub
+sudo stow -t / grub
+```
+
+For **sddm**:
+
+```bash
+sudo stow -t / sddm
 ```
