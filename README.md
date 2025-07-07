@@ -33,7 +33,7 @@ sudo pacman -S exa
 
 ---
 
-### Target directory
+### Target directories
 
 For **grub**:  
 
