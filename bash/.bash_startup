@@ -7,8 +7,3 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 ssh-add
 
-# tmux
-if [ -z "$TMUX" ]; then
-#    export BASH_STARTED_WITHOUT_TMUX=1
-    tmux attach || tmux new
-fi
