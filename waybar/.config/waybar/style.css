@@ -1,127 +1,131 @@
-@import "mocha.css"; 
-
 * {
-    font-family: "MesloLGS Nerd Font Mono Bold";
-    font-size: 16px;
-    min-height: 0;
-    font-weight: bold;
+  font-family: "CaskaydiaCove Nerd Font", "Font Awesome 6 Free", "Font Awesome 6 Free Solid";
+  font-size: 16px;
+  border-radius: 0;
+  min-height: 0;
+  border: none;
+  font-weight: bold;
 }
 
-window#waybar {
-    background: transparent;
-    background-color: @crust;
-    color: @overlay0;
-    transition-property: background-color;
-    transition-duration: 0.1s;
-    border-bottom: 1px solid @overlay1;
+#workspaces{
+  background-color: rgba(24,24,37,1.0);
+  border: none;
+  box-shadow: none;
 }
 
-#window {
-    margin: 8px;
-    padding-left: 8;
-    padding-right: 8;
+#tray{
+  margin: 6px 3px;
+  background-color: rgba(36, 36, 52, 1.0);
+  padding: 6px 12px; /* 保持内部间距 */
+  border-radius: 6px;
+  border-width: 0px;
 }
 
-button {
-    box-shadow: inset 0 -3px transparent;
-    border: none;
-    border-radius: 0;
+#waybar {
+  background-color: #181825;
+  transition-property: background-color;
+  transition-duration: 0.5s;
 }
 
-button:hover {
-    background: inherit;
-    color: @mauve;
-    border-top: 2px solid @mauve;
-}
-
-#workspaces button {
-    padding: 0 4px;
-}
-
-#workspaces button.focused {
-    background-color: rgba(0, 0, 0, 0.3);
-    color: @rosewater;
-    border-top: 2px solid @rosewater;
-}
-
-#workspaces button.active {
-    background-color: rgba(0, 0, 0, 0.3);
-    color: @mauve;
-    border-top: 2px solid @mauve;
-}
-
-#workspaces button.urgent {
-    background-color: #eb4d4b;
-}
-
-#pulseaudio,
+#window,
 #clock,
+#custom-power,
+#custom-reboot,
+#bluetooth,
 #battery,
-#cpu,
-#memory,
-#disk,
-#temperature,
+#pulseaudio,
 #backlight,
-#wireplumber,
-#tray,
+#custom-temperature,
+#memory,
+#cpu,
 #network,
-#mode,
-#scratchpad {
-  margin-top: 2px;
-  margin-bottom: 2px;
-  margin-left: 4px;
-  margin-right: 4px;
-  padding-left: 4px;
-  padding-right: 4px;
+#custom-lock{
+  border-radius: 4px;
+  margin: 6px 3px;
+  padding: 6px 12px;
+  background-color: #1e1e2e;
+  color: #181825;
 }
 
 #clock {
-    color: @maroon;
-    border-bottom: 2px solid @maroon;
+  background-color: #89b4fa;
+}
+#custom-power{
+  background-color: #f38ba8;
+}
+#custom-reboot{
+  background-color: #a6e3a1;
+}
+#bluetooth{
+  background-color: #f9e2af;
+}
+#battery{
+  background-color: #cba6f7;
+}
+#pulseaudio{
+  background-color: #89dceb;
+}
+#backlight{
+  background-color: #a6a3a1;
+}
+#custom-temperature{
+  background-color: #74c7ec;
+}
+#memory{
+  background-color: #f7768e;
+}
+#cpu{
+  background-color: #f38ba8;
+}
+#network{
+  background-color: #fab387;
+}
+#custom-lock{
+  background-color: #94e2d5;
+}
+#window{
+  background-color: #74c7ec;
 }
 
-#clock.date {
-    color: @mauve;
-    border-bottom: 2px solid @mauve;
+#waybar.hidden {
+  opacity: 0.5;
 }
 
-#pulseaudio {
-    color: @blue;
-    border-bottom: 2px solid @blue;
+#workspaces button {
+  all: initial;
+  /* Remove GTK theme values (waybar #1351) */
+  min-width: 0;
+  /* Fix weird spacing in materia (waybar #450) */
+  box-shadow: inset 0 -3px transparent;
+  /* Use box-shadow instead of border so the text isn't offset */
+  padding: 6px 18px;
+  margin: 6px 3px;
+  border-radius: 4px;
+  background-color: rgba(36, 36, 52, 1.0);
+  color: #cdd6f4;
 }
 
-#network {
-    color: @yellow;
-    border-bottom: 2px solid @yellow;
+#workspaces button.active {
+  color: #1e1e2e;
+  background-color: #cdd6f4;
 }
 
-#idle_inhibitor {
-    margin-right: 12px;
-    color: #7cb342;
+#workspaces button:hover {
+  box-shadow: inherit;
+  text-shadow: inherit;
+  color: #1e1e2e;
+  background-color: #cdd6f4;
 }
 
-#idle_inhibitor.activated {
-    color: @red;
+tooltip {
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #131822;
+  color: #C0C0C0;
 }
 
-#battery {
-    color: @green;
-    border-bottom: 2px solid @green;
-}
-
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left>widget:first-child>#workspaces {
-    margin-left: 0;
-}
-
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right>widget:last-child>#workspaces {
-    margin-right: 0;
-}
-
-#custom-vpn {
-    color: @lavender;
-    border-radius: 15px;
-    padding-left: 6px;
-    padding-right: 6px;
+tooltip label {
+  padding: 5px;
+  background-color: #131822;
+  color: #C0C0C0;
 }
