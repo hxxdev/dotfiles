@@ -1,7 +1,8 @@
 nnoremap <C-m> <Plug>MarkdownPreview
-nnoremap <C-e> :NvimTreeOpen<CR>
+" nnoremap <C-e> :NvimTreeOpen<CR>
+nnoremap <C-e> :lua MiniFiles.open()<CR>
 
-cnoreabbrev open NvimTreeOpen
+" cnoreabbrev open NvimTreeOpen
 
 " Clipboard yank and delete mappings
 " ----------------------------

@@ -44,7 +44,7 @@ Plug 'stevearc/conform.nvim'
 Plug 'saghen/blink.cmp'
 Plug 'L3MON4D3/LuaSnip'
 " mini-plugins(ai, align, comment, completion, keymap, move...)
-Plug 'echasnovski/mini.nvim'
+Plug 'echasnovski/mini.nvim', { 'branch': 'stable' }
 " hxxdev
 Plug 'hxxdev/LazyVerilog', { 'as': 'lazy_verilog' }
 

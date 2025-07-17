@@ -3,6 +3,7 @@ require('mini.ai').setup {
 }
 
 -- mini.surround
+require('mini.files').setup()
 require('mini.surround').setup()
 
 -- mini.align
