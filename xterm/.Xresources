@@ -38,6 +38,9 @@ XTerm*color15: #fdf6e3
 ! Clipboard Behavior
 ! ========================
 XTerm*selectToClipboard: true
+XTerm*VT100.translations: #override \
+    Shift<Key>Insert: insert-selection(CLIPBOARD) \n\
+    ~Meta <Btn2Up>: insert-selection(PRIMARY)
 
 ! ========================
 ! Miscellaneous
