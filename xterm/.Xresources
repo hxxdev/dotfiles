@@ -1,0 +1,51 @@
+! ========================
+! Font settings (Xft)
+! ========================
+XTerm*faceName: UbuntuMono Nerd Font Mono
+XTerm*faceSize: 14
+XTerm*antialias: true
+
+! ========================
+! Scrollback buffer
+! ========================
+XTerm*saveLines: 10000
+
+! ========================
+! Color scheme: Solarized Dark
+! ========================
+XTerm*foreground: #839496
+XTerm*transparent: true
+XTerm*background: black
+XTerm*cursorColor: #93a1a1
+XTerm*color0:  #073642
+XTerm*color1:  #dc322f
+XTerm*color2:  #859900
+XTerm*color3:  #b58900
+XTerm*color4:  #268bd2
+XTerm*color5:  #d33682
+XTerm*color6:  #2aa198
+XTerm*color7:  #eee8d5
+XTerm*color8:  #002b36
+XTerm*color9:  #cb4b16
+XTerm*color10: #586e75
+XTerm*color11: #657b83
+XTerm*color12: #839496
+XTerm*color13: #6c71c4
+XTerm*color14: #93a1a1
+XTerm*color15: #fdf6e3
+
+! ========================
+! Clipboard Behavior
+! ========================
+XTerm*selectToClipboard: true
+
+! ========================
+! Miscellaneous
+! ========================
+XTerm*internalBorder: 10
+XTerm*title: xterm
+XTerm*loginShell: true
+XTerm*visualBell: true
+
+XTerm*utf8: 2
+XTerm*locale: true
