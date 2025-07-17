@@ -14,7 +14,6 @@ XTerm*saveLines: 10000
 ! Color scheme: Solarized Dark
 ! ========================
 XTerm*foreground: #839496
-XTerm*transparent: true
 XTerm*background: black
 XTerm*cursorColor: #93a1a1
 XTerm*color0:  #073642

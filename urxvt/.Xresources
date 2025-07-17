@@ -1,0 +1,60 @@
+! ========================
+! Font settings
+! ========================
+URxvt.font: xft:UbuntuMono Nerd Font Mono:size=14
+URxvt.boldFont: xft:UbuntuMono Nerd Font Mono:bold:size=14
+URxvt.italicFont: xft:UbuntuMono Nerd Font Mono:italic:size=14
+URxvt.boldItalicFont: xft:UbuntuMono Nerd Font Mono:bold:italic:size=14
+URxvt.allow_bold: true
+URxvt.xftAntialias: true
+
+! ========================
+! Scrollback buffer
+! ========================
+URxvt.saveLines: 10000
+
+! ========================
+! Color scheme: Solarized Dark
+! ========================
+URxvt.foreground: #839496
+URxvt.background: black
+URxvt.cursorColor: #93a1a1
+
+URxvt.color0:  #073642
+URxvt.color1:  #dc322f
+URxvt.color2:  #859900
+URxvt.color3:  #b58900
+URxvt.color4:  #268bd2
+URxvt.color5:  #d33682
+URxvt.color6:  #2aa198
+URxvt.color7:  #eee8d5
+URxvt.color8:  #002b36
+URxvt.color9:  #cb4b16
+URxvt.color10: #586e75
+URxvt.color11: #657b83
+URxvt.color12: #839496
+URxvt.color13: #6c71c4
+URxvt.color14: #93a1a1
+URxvt.color15: #fdf6e3
+
+! ========================
+! Clipboard Behavior
+! ========================
+URxvt.perl-ext-common: default,clipboard
+
+! Shift+Insert → paste from clipboard
+URxvt.keysym.Shift-Insert: perl:clipboard:paste
+
+! Middle click → paste from PRIMARY
+URxvt.keysym.Button2: eval:paste_primary
+
+! ========================
+! Miscellaneous
+! ========================
+URxvt.internalBorder: 10
+URxvt.title: urxvt
+URxvt.loginShell: true
+URxvt.visualBell: true
+URxvt.locale: true
+URxvt.cutchars: " `'\"()[]{}<>|,;:"
+
