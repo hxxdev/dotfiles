@@ -15,12 +15,20 @@ lspconfig.clangd.setup {
 }
 
 local lspconfutil = require 'lspconfig/util'
-local root_pattern = lspconfutil.root_pattern('veridian.yml', '.git')
+local root_pattern = lspconfutil.root_pattern('verible.filelist', '.git', '.rules.verible_lint', 'veridian.yml')
 
--- Fallback for is_absolute (Unix only)
 local function is_absolute(filename)
     return filename:sub(1, 1) == '/'
 end
+
+--lspconfig.verible.setup {
+--    --    cmd = { 'verible-verilog-ls' },
+--    cmd = { 'verible-verilog-ls', '--lsp_enable_hover' },
+--    root_dir = function(fname)
+--        local filename = is_absolute(fname) and fname or lspconfutil.path.join(vim.loop.cwd(), fname)
+--        return root_pattern(filename) or lspconfutil.path.dirname(filename)
+--    end,
+--}
 
 lspconfig.veridian.setup {
     cmd = { 'veridian' },
@@ -64,6 +72,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
         map('grr', builtin.lsp_references, '[G]oto [R]eferences')
         map('gri', builtin.lsp_implementations, '[G]oto [I]mplementation')
         map('gd', builtin.lsp_definitions, '[G]oto [D]efinition')
+        --map('gd', vim.lsp.buf.definition, '[G]oto [D]eclaration')
         map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
         map('go', builtin.lsp_document_symbols, '[G]oto d[O]cument Symbols')
         map('gW', builtin.lsp_dynamic_workspace_symbols, 'Open Workspace Symbols')
