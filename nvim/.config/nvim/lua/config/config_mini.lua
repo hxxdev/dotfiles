@@ -36,7 +36,15 @@ require('mini.pairs').setup()
 
 require('mini.starter').setup()
 
--- require('mini.pick').setup()
+--require('mini.pick').setup()
+--local builtin = require('mini.pick').builtin
+--vim.keymap.set('n', '<leader>sh', builtin.help, { desc = '[S]earch [H]elp' })
+--vim.keymap.set('n', '<leader>sf', builtin.files, { desc = '[S]earch [F]iles' })
+--vim.keymap.set('n', '<leader>sg', builtin.grep_live, { desc = '[S]earch by [G]rep' })
+--vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
+--vim.keymap.set('n', '<leader><leader>', function()
+--    builtin.files { tool = 'git' }()
+--end, { desc = '[S]earch by [G]it' })
 
 -- mini.statusline
 -- local statusline = require 'mini.statusline'

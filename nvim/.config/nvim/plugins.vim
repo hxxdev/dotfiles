@@ -20,8 +20,7 @@ Plug 'folke/which-key.nvim'
 " Telescope
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
-Plug 'nvim-telescope/telescope-ui-select.nvim'
+Plug 'desdic/telescope-rooter.nvim'
 
 " lsp
 Plug 'folke/lazydev.nvim'
