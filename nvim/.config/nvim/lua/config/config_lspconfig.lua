@@ -63,9 +63,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
         map('gra', vim.lsp.buf.code_action, '[G]oto Code [A]ction', { 'n', 'x' })
         map('grr', builtin.lsp_references, '[G]oto [R]eferences')
         map('gri', builtin.lsp_implementations, '[G]oto [I]mplementation')
-        map('grd', builtin.lsp_definitions, '[G]oto [D]efinition')
-        map('grD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
-        map('gO', builtin.lsp_document_symbols, 'Open Document Symbols')
+        map('gd', builtin.lsp_definitions, '[G]oto [D]efinition')
+        map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
+        map('go', builtin.lsp_document_symbols, '[G]oto d[O]cument Symbols')
         map('gW', builtin.lsp_dynamic_workspace_symbols, 'Open Workspace Symbols')
         map('grt', builtin.lsp_type_definitions, '[G]oto [T]ype Definition')
 
