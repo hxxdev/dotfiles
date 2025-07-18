@@ -67,7 +67,7 @@ alias gohxx='cd ~/dev/hxxdev.github.io; source env.sh'
 alias goasm='cd ~/dev/assembly_playground;source env.sh'
 alias goverilog='cd ~/dev/verilog_playground;source env.sh'
 alias gotools='cd ~/dev/tools'
-alias gonvim='cd ~/dev/tools/vim/nvim'
+alias gonvim='cd ~/.config/nvim'
 alias godot='cd ~/dotfiles'
 alias testcolor="awk 'BEGIN{
     s=\"/\\\\/\\\\/\\\\/\\\\/\"; s=s s s s s s s s;
