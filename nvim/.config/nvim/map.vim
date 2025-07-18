@@ -1,6 +1,5 @@
 nnoremap <C-m> <Plug>MarkdownPreview
 " nnoremap <C-e> :NvimTreeOpen<CR>
-nnoremap <C-e> :lua MiniFiles.open()<CR>
 
 " cnoreabbrev open NvimTreeOpen
 

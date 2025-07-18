@@ -1,7 +1,12 @@
 --require('mini.ai').setup()
 
 require('mini.files').setup()
-
+vim.keymap.set('n', '<C-e>', function()
+    local buf_name = vim.api.nvim_buf_get_name(0)
+    local path = vim.fn.filereadable(buf_name) == 1 and buf_name or vim.fn.getcwd()
+    MiniFiles.open(path)
+    MiniFiles.reveal_cwd()
+end, { desc = 'Open Mini Files' })
 -- visual mode sa ": wrap with "
 -- normal mode sd ': remove surrounding ''
 -- normal mode sr '(: replace surrounding '' with ()
@@ -37,7 +42,7 @@ require('mini.pairs').setup()
 require('mini.starter').setup()
 
 --require('mini.pick').setup()
---local builtin = require('mini.pick').builtin
+--local builtin = MiniPick.builtin
 --vim.keymap.set('n', '<leader>sh', builtin.help, { desc = '[S]earch [H]elp' })
 --vim.keymap.set('n', '<leader>sf', builtin.files, { desc = '[S]earch [F]iles' })
 --vim.keymap.set('n', '<leader>sg', builtin.grep_live, { desc = '[S]earch by [G]rep' })
