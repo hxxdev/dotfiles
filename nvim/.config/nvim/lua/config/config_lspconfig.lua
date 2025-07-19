@@ -30,14 +30,14 @@ end
 --    end,
 --}
 
-lspconfig.veridian.setup {
-    cmd = { 'veridian' },
-    filetypes = { 'systemverilog', 'verilog' },
-    root_dir = function(fname)
-        local filename = is_absolute(fname) and fname or lspconfutil.path.join(vim.loop.cwd(), fname)
-        return root_pattern(filename) or lspconfutil.path.dirname(filename)
-    end,
-}
+-- lspconfig.veridian.setup {
+--     cmd = { 'veridian' },
+--     filetypes = { 'systemverilog', 'verilog' },
+--     root_dir = function(fname)
+--         local filename = is_absolute(fname) and fname or lspconfutil.path.join(vim.loop.cwd(), fname)
+--         return root_pattern(filename) or lspconfutil.path.dirname(filename)
+--     end,
+-- }
 
 --lspconfig.svlangserver.setup {
 --    on_init = function(client)

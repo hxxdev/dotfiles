@@ -31,6 +31,8 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'mason-org/mason.nvim'
 Plug 'mason-org/mason-lspconfig.nvim'
 Plug 'WhoIsSethDaniel/mason-tool-installer.nvim'
+Plug 'nvimtools/none-ls.nvim', { 'as': 'null-ls' }
+
 " Optional LSP status UI
 Plug 'j-hui/fidget.nvim'
 " LSP capabilities extension (used by blink.cmp)

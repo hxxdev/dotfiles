@@ -19,4 +19,5 @@ require 'config.config_lazydev'
 require 'config.config_conform'
 require 'config.config_blink'
 require 'config.config_mini'
+require 'config.config_none-ls'
 -- require("config_image")
