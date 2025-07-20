@@ -1,2 +1,7 @@
 vim.cmd('filetype on')
-vim.cmd('au BufWinEnter,BufRead,BufNewFile *.md set filetype=markdown')
+vim.api.nvim_create_autocmd({ "BufWinEnter", "BufReadPre", "BufNewFile" }, {
+    pattern = "*.md",
+    callback = function()
+        vim.bo.filetype = "markdown"
+    end,
+})
