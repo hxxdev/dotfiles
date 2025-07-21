@@ -4,12 +4,53 @@ return {
         opts = {}
     },
     {
+        'mfussenegger/nvim-lint',
+        config = function()
+            local vcode_path = os.getenv("PATH_LSP_VCODE")
+            require('lint').linters.verilator.args = {
+                '--lint-only',
+                '-sv',
+                '-Wall',
+                '-f',
+                vcode_path,
+            }
+
+            require('lint').linters_by_ft = {
+                systemverilog = { 'verilator' },
+            }
+            vim.api.nvim_create_autocmd({ "BufWritePost", "BufReadPost" }, {
+                callback = function()
+                    -- Automatically run the appropriate linters for the filetype
+                    require("lint").try_lint()
+                end,
+            })
+        end
+
+    },
+    --{
+    --    'nvimtools/none-ls.nvim',
+    --    dependencies = { 'nvim-lua/plenary.nvim' },
+    --    config = function()
+    --        local null_ls = require("null-ls")
+    --        null_ls.setup({
+    --            sources = {
+    --                null_ls.builtins.formatting.verible_verilog_format.with({
+    --                    command = { "verible-verilog-format",
+    --                        "--indentation_spaces=4" }, -- optional override if needed
+    --                    filetypes = { "verilog", "systemverilog" },
+    --                }),
+    --            },
+    --        })
+    --    end,
+    --},
+    {
         "neovim/nvim-lspconfig",
         event = { "BufReadPost", "BufNewFile" },
         ---@class PluginLspOpts
         config = function()
             local lspconfig = require('lspconfig')
             local capabilities = require('blink.cmp').get_lsp_capabilities()
+            local vcode_path = os.getenv("PATH_LSP_VCODE")
 
 
             local servers = {
@@ -46,6 +87,10 @@ return {
                     },
                     filetypes = { 'bash', 'sh' },
                     root_markers = { '.git' },
+                },
+                svls = {
+                    cmd = { "svls" },
+                    root_markers = { ".svls.toml", ".git" },
                 },
                 verible = {
                     cmd = { 'verible-verilog-ls', '--lsp_enable_hover' },
