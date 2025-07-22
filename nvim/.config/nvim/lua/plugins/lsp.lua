@@ -11,7 +11,7 @@ return {
                 '--lint-only',
                 '-sv',
                 '-Wall',
-                '-f',
+                '-F',
                 vcode_path,
             }
 
@@ -93,7 +93,7 @@ return {
                     root_markers = { ".svls.toml", ".git" },
                 },
                 verible = {
-                    cmd = { 'verible-verilog-ls', '--lsp_enable_hover' },
+                    cmd = { 'verible-verilog-ls', '--lsp_enable_hover', '--file_list_path', vcode_path },
                     filetypes = { 'systemverilog', 'verilog' },
                     root_markers = { '.git' },
                 },
