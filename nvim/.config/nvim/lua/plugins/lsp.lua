@@ -3,20 +3,47 @@ return {
         "mason-org/mason.nvim",
         opts = {}
     },
+    -- {
+    --     'mfussenegger/nvim-lint',
+    --     config = function()
+    --         local vcode_path = os.getenv("PATH_LSP_VCODE")
+    --         require('lint').linters.verilator.args = {
+    --             '--lint-only',
+    --             '-sv',
+    --             '-Wall',
+    --             '--timing',
+    --             '-F',
+    --             vcode_path,
+    --         }
+    --         require('lint').linters.verilator.append_fname = false
+    --
+    --         require('lint').linters_by_ft = {
+    --             systemverilog = { 'verilator' },
+    --         }
+    --         vim.api.nvim_create_autocmd({ "BufWritePost", "BufReadPost" }, {
+    --             callback = function()
+    --                 -- Automatically run the appropriate linters for the filetype
+    --                 require("lint").try_lint()
+    --             end,
+    --         })
+    --     end
+    -- },
+
     {
         'mfussenegger/nvim-lint',
         config = function()
             local vcode_path = os.getenv("PATH_LSP_VCODE")
-            require('lint').linters.verilator.args = {
-                '--lint-only',
-                '-sv',
-                '-Wall',
-                '-F',
-                vcode_path,
+            require('lint').linters.slang.args = {
+                '-f',
+                vcode_path
             }
+            -- NOTE: This line is inserted because...
+            -- slang -f vcode.f is CORRECT.
+            -- slang -f vcode.f ./alu.sv is INCORRECT.
+            require('lint').linters.slang.append_fname = false
 
             require('lint').linters_by_ft = {
-                systemverilog = { 'verilator' },
+                systemverilog = { 'slang' },
             }
             vim.api.nvim_create_autocmd({ "BufWritePost", "BufReadPost" }, {
                 callback = function()
@@ -88,15 +115,15 @@ return {
                     filetypes = { 'bash', 'sh' },
                     root_markers = { '.git' },
                 },
-                svls = {
-                    cmd = { "svls" },
-                    root_markers = { ".svls.toml", ".git" },
-                },
-                verible = {
-                    cmd = { 'verible-verilog-ls', '--lsp_enable_hover', '--file_list_path', vcode_path },
-                    filetypes = { 'systemverilog', 'verilog' },
-                    root_markers = { '.git' },
-                },
+                -- svls = {
+                --     cmd = { "svls" },
+                --     root_markers = { ".svls.toml", ".git" },
+                -- },
+                -- verible = {
+                --     cmd = { 'verible-verilog-ls', '--lsp_enable_hover', '--file_list_path', vcode_path },
+                --     filetypes = { 'systemverilog', 'verilog' },
+                --     root_markers = { '.git' },
+                -- },
                 --veridian = {
                 --    cmd = { 'veridian' },
                 --    filetypes = { 'systemverilog', 'verilog' },
