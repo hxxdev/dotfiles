@@ -2,7 +2,6 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.history = 1000
 vim.opt.mouse = 'a'
-vim.opt.autoread = true
 vim.opt.ruler = true
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
@@ -18,4 +17,8 @@ vim.opt.list = true
 vim.opt.wrap = false
 vim.opt.signcolumn = 'yes'
 vim.opt.clipboard = 'unnamedplus'
+vim.opt.autoread = true
+vim.opt.swapfile = false
+vim.opt.winborder = "rounded"
 vim.cmd('syntax on')
+vim.cmd('set completeopt+=noselect')
