@@ -68,6 +68,7 @@ alias goverilog='cd ~/dev/verilog_playground;source env.sh'
 alias gotools='cd ~/dev/tools'
 alias gonvim='cd ~/.config/nvim'
 alias godot='cd ~/dotfiles'
+alias kakao="WINEDLLOVERRIDES=\"explorer.exe=d\" wine ~/.wine/drive_c/Program\ Files/Kakao/KakaoTalk/KakaoTalk.exe"
 alias testcolor="awk 'BEGIN{
     s=\"/\\\\/\\\\/\\\\/\\\\/\"; s=s s s s s s s s;
     for (colnum = 0; colnum<77; colnum++) {
