@@ -1,4 +1,4 @@
-hyfetch --ascii-file ~/.config/ascii_arts/coca_cola.txt
+hyfetch --ascii-file ~/.config/ascii_arts/linux_text.txt
 eval "$(starship init bash)"
 eval "$(thefuck --alias)"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
