@@ -28,12 +28,6 @@
 -- vim.keymap.set('n', 'y', '"+y', { silent = true })
 -- vim.keymap.set('n', 'd', '"+d', { silent = true })
 -- vim.keymap.set('n', 'c', '"+c', { silent = true })
-vim.api.nvim_create_autocmd("FileType", {
-    pattern = { "c", "cpp" },
-    callback = function()
-        vim.keymap.set("n", "<F5>", function()
-            vim.cmd("w") -- Save file
-            vim.cmd("botright 10split term://clang++ -std=c++20 % -o %:r && ./%:r")
-        end, { buffer = true, noremap = true, desc = "Compile and Run C/C++ in terminal" })
-    end,
-})
+vim.keymap.set("n", "<F5>", function()
+    vim.cmd("OverseerRun")
+end, { buffer = true, desc = "Run Overseer" })
