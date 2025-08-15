@@ -87,7 +87,9 @@ return {
                     end
                 end,
             })
-
+            on_attach = function(client, bufnr)
+                require("nvim-navic").attach(client, bufnr)
+            end
             local servers = {
                 clangd = {},
                 pyright = {},
@@ -140,6 +142,7 @@ return {
             }
             for server_name, config in pairs(servers) do
                 config.capabilities = capabilities
+                config.on_attach = on_attach
                 lspconfig[server_name].setup(config)
             end
 
