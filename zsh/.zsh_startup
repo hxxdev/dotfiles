@@ -1,0 +1,9 @@
+# shellcheck shell=zsh
+hyfetch --ascii-file ~/.config/ascii_arts/linux_text.txt
+eval "$(starship init zsh)"
+eval "$(thefuck --alias)"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# ssh
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+ssh-add

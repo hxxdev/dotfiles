@@ -1,0 +1,2 @@
+# shellcheck shell=zsh
+export PATH=$HOME/bin:$PATH
