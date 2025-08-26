@@ -1,8 +1,19 @@
 # shellcheck shell=zsh
 hyfetch --ascii-file ~/.config/ascii_arts/linux_text.txt
-eval "$(starship init zsh)"
 eval "$(thefuck --alias)"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# Oh My Zsh startup
+export ZSH="$HOME/.oh-my-zsh"
+# ZSH_THEME="robbyrussell"
+plugins=(
+    git
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+)
+source $ZSH/oh-my-zsh.sh
+
+eval "$(starship init zsh)"
 
 # ssh
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
