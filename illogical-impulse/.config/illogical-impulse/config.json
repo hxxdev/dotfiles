@@ -21,7 +21,7 @@
     "extraBackgroundTint": true,
     "fakeScreenRounding": 2,
     "palette": {
-      "type": "scheme-tonal-spot"
+      "type": "auto"
     },
     "transparency": {
       "automatic": true,
@@ -53,13 +53,16 @@
     "clockX": -500,
     "clockY": -500,
     "fixedClockPosition": false,
+    "hideWhenFullscreen": true,
+    "mantra": "",
     "parallax": {
       "enableSidebar": true,
       "enableWorkspace": true,
+      "vertical": false,
       "workspaceZoom": 1.07
     },
     "thumbnailPath": "",
-    "wallpaperPath": "/home/hxxdev/.config/backgrounds/gruvbox_astro.jpg"
+    "wallpaperPath": "/home/hxxdev/Pictures/Wallpapers/andre-benz-JBkwaYMuhdc-unsplash.jpg"
   },
   "bar": {
     "autoHide": {
@@ -81,7 +84,11 @@
     "showBackground": true,
     "topLeftIcon": "spark",
     "tray": {
-      "monochromeIcons": true
+      "invertPinnedItems": false,
+      "monochromeIcons": true,
+      "pinnedItems": [
+        "Fcitx"
+      ]
     },
     "utilButtons": {
       "showColorPicker": true,
@@ -195,7 +202,11 @@
     "prefix": {
       "action": "/",
       "clipboard": ";",
-      "emojis": ":"
+      "emojis": ":",
+      "math": "=",
+      "shellCommand": "$",
+      "showDefaultActionsWithoutPrefix": true,
+      "webSearch": "?"
     },
     "sloppy": false
   },
