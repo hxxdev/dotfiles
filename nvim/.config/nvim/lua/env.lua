@@ -20,5 +20,6 @@ vim.opt.clipboard = 'unnamedplus'
 vim.opt.autoread = true
 vim.opt.swapfile = false
 vim.opt.winborder = "rounded"
+vim.opt.scrolloff = 7
 vim.cmd('syntax on')
 vim.cmd('set completeopt+=noselect')
