@@ -26,12 +26,12 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.zsh_aliases, instead of adding them here directly.
-if [ -f ~/.zsh_alias ]; then
-    . ~/.zsh_alias
-fi
-
 if [ -f ~/.zsh_startup ]; then
     . ~/.zsh_startup
+fi
+
+if [ -f ~/.zsh_alias ]; then
+    . ~/.zsh_alias
 fi
 
 if [ -f ~/.zsh_env ]; then
