@@ -1,2 +1,2 @@
--- vim.cmd.colorscheme "catppuccin"
+vim.cmd.colorscheme "catppuccin"
 -- vim.cmd.colorscheme "rose-pine"
