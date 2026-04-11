@@ -21,7 +21,7 @@
     "extraBackgroundTint": true,
     "fakeScreenRounding": 2,
     "palette": {
-      "type": "auto"
+      "type": "scheme-expressive"
     },
     "transparency": {
       "automatic": true,
@@ -62,7 +62,7 @@
       "workspaceZoom": 1.07
     },
     "thumbnailPath": "",
-    "wallpaperPath": "/home/hxxdev/Pictures/Wallpapers/andre-benz-JBkwaYMuhdc-unsplash.jpg"
+    "wallpaperPath": "/home/hxxdev/Pictures/Wallpapers/nice-blue-background.png"
   },
   "bar": {
     "autoHide": {

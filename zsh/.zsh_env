@@ -1,2 +1,7 @@
 # shellcheck shell=zsh
-export PATH=$HOME/bin:$PATH
+typeset -U path
+path=(
+    $HOME/bin
+    $HOME/.local/share/gem/ruby/3.4.0/bin
+    $path
+)

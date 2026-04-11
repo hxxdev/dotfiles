@@ -10,3 +10,5 @@
 
 # Added by `rbenv init` on Sat Jun  7 08:50:18 PM KST 2025
 eval "$(rbenv init - --no-rehash bash)"
+
+. "$HOME/.local/bin/env"
