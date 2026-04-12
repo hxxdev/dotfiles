@@ -1,10 +1,17 @@
--- Function to find all 'tags' files up the directory tree
-return {
-    'ludovicchabant/vim-gutentags',
-    lazy = true,
-    ft = { 'verilog', 'systemverilog', 'c', 'cpp', 'python' },
-    config = function()
-        -- Gutentags configuration in Lua
+vim.pack.add({
+    {
+        src = 'https://github.com/ludovicchabant/vim-gutentags',
+        name = 'vim-gutentags',
+        load = false, -- lazy: loaded on FileType
+    },
+})
+
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = { 'verilog', 'systemverilog', 'c', 'cpp', 'python' },
+    once = true,
+    callback = function()
+        vim.cmd.packadd('vim-gutentags')
+
         vim.g.gutentags_enabled = 1
         vim.g.gutentags_modules = { "ctags" }
 
@@ -25,5 +32,5 @@ return {
             "--tag-relative=no",
             "--fields=+l",
         }
-    end
-}
+    end,
+})
