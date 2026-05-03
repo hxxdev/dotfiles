@@ -10,6 +10,7 @@ require('plugins.noice')
 
 -- Colorschemes (eager, high priority)
 require('plugins.catppuccin')
+require('plugins.kanso')
 require('plugins.github_nvim_theme')
 require('plugins.rose_pine')
 
@@ -22,6 +23,8 @@ require('plugins.treesitter')
 require('plugins.debugger')
 require('plugins.overseer')
 require('plugins.vim_tmux_navigator')
+
+require('plugins.lazyverilogpy')
 
 -- Lazy-loaded (ft-based)
 require('plugins.gutentags')

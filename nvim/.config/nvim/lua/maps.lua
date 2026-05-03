@@ -31,3 +31,15 @@
 vim.keymap.set("n", "<F5>", function()
     vim.cmd("OverseerRun")
 end, { buffer = true, desc = "Run Overseer" })
+
+-- Manually mapping LspLog, LspInfo because they are removed.
+vim.api.nvim_create_user_command('LspLog', function()
+    vim.cmd('edit ' .. vim.lsp.get_log_path())
+end, {})
+vim.api.nvim_create_user_command("LspInfo", function()
+    vim.cmd("checkhealth vim.lsp")
+end, { desc = "Show LSP status (alias for :checkhealth vim.lsp)" })
+vim.keymap.set('n', '<C-Left>', ':vertical resize -3<CR>')
+vim.keymap.set('n', '<C-Right>', ':vertical resize +3<CR>')
+vim.keymap.set('n', '<C-Up>', ':resize -3<CR>')
+vim.keymap.set('n', '<C-Down>', ':resize +3<CR>')
