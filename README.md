@@ -15,7 +15,7 @@ sudo pacman -S stow
 run `stow` to create symlink to this repository,  
 
 ```bash
-stow <package_name>
+stow -t ~ <package_name>
 ```
 
 ---
