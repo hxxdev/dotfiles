@@ -34,7 +34,7 @@ end, { buffer = true, desc = "Run Overseer" })
 
 -- Manually mapping LspLog, LspInfo because they are removed.
 vim.api.nvim_create_user_command('LspLog', function()
-    vim.cmd('edit ' .. vim.lsp.get_log_path())
+    vim.cmd('edit ' .. vim.lsp.log.get_filename())
 end, {})
 vim.api.nvim_create_user_command("LspInfo", function()
     vim.cmd("checkhealth vim.lsp")
