@@ -1,7 +1,7 @@
 vim.pack.add({
-    { src = 'https://github.com/nvim-lua/plenary.nvim',          name = 'plenary.nvim',          load = true },
-    { src = 'https://github.com/desdic/telescope-rooter.nvim',   name = 'telescope-rooter.nvim', load = true },
-    { src = 'https://github.com/nvim-telescope/telescope.nvim',  name = 'telescope.nvim',        load = true },
+    { src = 'https://github.com/nvim-lua/plenary.nvim',         name = 'plenary.nvim',          load = true },
+    { src = 'https://github.com/desdic/telescope-rooter.nvim',  name = 'telescope-rooter.nvim', load = true },
+    { src = 'https://github.com/nvim-telescope/telescope.nvim', name = 'telescope.nvim',        load = true },
 })
 
 local builtin = require("telescope.builtin")
@@ -59,3 +59,7 @@ end, { desc = '[S]earch [/] in Open Files' })
 vim.keymap.set('n', '<leader>sn', function()
     builtin.find_files { cwd = vim.fn.stdpath 'config' }
 end, { desc = '[S]earch [N]eovim files' })
+
+vim.keymap.set("n", "<leader>ws", function()
+    require("telescope.builtin").lsp_workspace_symbols({ query = "" })
+end, { buffer = bufnr, silent = true, desc = '[W]ork [S]pace' })
