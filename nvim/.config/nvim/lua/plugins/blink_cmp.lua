@@ -1,3 +1,5 @@
+vim.api.nvim_set_hl(0, 'BlinkCmpSignatureHelpActiveParameter', { bold = true, underline = true })
+
 vim.pack.add({
     { src = 'https://github.com/rafamadriz/friendly-snippets', name = 'friendly-snippets', load = true },
     {
@@ -28,11 +30,15 @@ require('blink.cmp').setup({
     appearance = {
         -- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
         -- Adjusts spacing to ensure icons are aligned
-        nerd_font_variant = 'mono'
+        nerd_font_variant = 'mono',
+        use_nvim_cmp_as_default = false,
     },
 
     -- (Default) Only show the documentation popup when manually triggered
     completion = { documentation = { auto_show = false } },
+
+    -- Enable signature help popup (C-k toggles it)
+    signature = { enabled = true },
 
     -- Default list of enabled providers defined so that you can extend it
     -- elsewhere in your config, without redefining it
