@@ -56,6 +56,11 @@ For multi-step tasks, state a brief plan:
 
 Strong success criteria let you loop independently. Weak criteria ("make it work") require constant clarification.
 
+## 5. Commit Conventions
+
+- Commit author must be the user (git `user.name`/`user.email` from repo/global config), never "Claude". Do not add `Co-Authored-By: Claude` or similar trailers.
+- Commit messages: as short as possible. One line, no body, unless a body is truly necessary to explain non-obvious "why".
+
 ---
 
 **These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
